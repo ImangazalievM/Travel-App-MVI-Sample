@@ -1,4 +1,4 @@
-package com.imangazalievm.travelapp
+package com.travelguide
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

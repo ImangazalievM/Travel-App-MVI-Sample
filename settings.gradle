@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "Travel-App-MVI-Sample"
