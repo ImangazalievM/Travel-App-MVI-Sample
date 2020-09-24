@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.travelguide.global.models.Place
 import kotlinx.android.synthetic.main.item_recommended_place.view.*
 
@@ -42,6 +43,7 @@ class RecommendedPlacesAdapter(
         Glide.with(itemView.context)
             .load(place.imageUrl)
             .centerCrop()
+            .transition(DrawableTransitionOptions.withCrossFade())
             .into(itemView.placeImageImage)
     }
 

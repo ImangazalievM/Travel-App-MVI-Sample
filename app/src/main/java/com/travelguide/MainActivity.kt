@@ -20,14 +20,14 @@ class MainActivity : AppCompatActivity() {
             reviewCount = 84
         )
         val items = listOf(
-            item.copy(rating = 5.0f, imageUrl = "${Constants.IMAGES_URL}/1.jpg"),
-            item.copy(rating = 4.0f, imageUrl = "${Constants.IMAGES_URL}/2.jpeg",),
-            item.copy(rating = 4.9f, imageUrl = "${Constants.IMAGES_URL}/3.jpg"),
-            item.copy(imageUrl = "${Constants.IMAGES_URL}/4.jpg"),
-            item.copy(rating = 4.1f, imageUrl = "${Constants.IMAGES_URL}/5.jpg"),
-            item.copy(imageUrl = "${Constants.IMAGES_URL}/6.jpg",),
-            item.copy(rating = 4.3f, imageUrl = "${Constants.IMAGES_URL}/2.jpeg"),
-            item.copy(imageUrl = "${Constants.IMAGES_URL}/4.jpg",)
+            item.copy(rating = 3.2f, imageUrl = "${Constants.IMAGES_URL}/1.jpg"),
+            item.copy(rating = 4.3f, imageUrl = "${Constants.IMAGES_URL}/2.jpeg",),
+            item.copy(rating = 4.5f, imageUrl = "${Constants.IMAGES_URL}/3.jpg"),
+            item.copy(rating = 4.6f, imageUrl = "${Constants.IMAGES_URL}/4.jpg"),
+            item.copy(rating = 4.7f, imageUrl = "${Constants.IMAGES_URL}/5.jpg"),
+            item.copy(rating = 4.8f, imageUrl = "${Constants.IMAGES_URL}/6.jpg",),
+            item.copy(rating = 4.9f, imageUrl = "${Constants.IMAGES_URL}/2.jpeg"),
+            item.copy(rating = 5.0f, imageUrl = "${Constants.IMAGES_URL}/4.jpg",)
         )
 
         popularPlacesIndicator.removeAllTabs()
@@ -44,7 +44,8 @@ class MainActivity : AppCompatActivity() {
             popularPlacesIndicator.getTabAt(position)?.select()
         }
 
-        recommendedPlaces.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recommendedPlaces.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recommendedPlaces.adapter = RecommendedPlacesAdapter(items) {
 
         }
