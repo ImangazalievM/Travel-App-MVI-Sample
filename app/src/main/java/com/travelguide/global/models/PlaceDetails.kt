@@ -1,4 +1,4 @@
 package com.travelguide.global.models
 
-class DestinationDetails {
+class PlaceDetails {
 }

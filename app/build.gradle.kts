@@ -43,4 +43,8 @@ dependencies {
     implementation("javax.inject:javax.inject:1")
 
     implementation("com.yarolegovich:discrete-scrollview:1.5.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.1")
+
+    implementation("com.github.bumptech.glide:glide:4.10.0")
+    kapt("com.github.bumptech.glide:compiler:4.10.0")
 }

@@ -1,9 +1,9 @@
 package com.travelguide.data.places
 
 import com.travelguide.global.models.Place
-import com.travelguide.global.models.DestinationDetails
+import com.travelguide.global.models.PlaceDetails
 
-class DestinationsRepository {
+class PlacesRepository {
 
     suspend fun getPopularPlaces() : List<Place> {
         TODO()
@@ -13,7 +13,7 @@ class DestinationsRepository {
         TODO()
     }
 
-    fun getPlaceDetails(placeId: Long) : DestinationDetails {
+    fun getPlaceDetails(placeId: Long) : PlaceDetails {
         TODO()
     }
 
