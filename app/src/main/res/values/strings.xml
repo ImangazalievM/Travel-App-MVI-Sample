@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Travel Guide</string>
+
+    <string name="reviews_count_label">(%d reviews)</string>
+
+    <string name="place_title_transition">place_title_transition_%d</string>
+    <string name="place_description_transition">place_description_transition_%d</string>
+    <string name="place_image_transition">place_image_transition_%d</string>
+    <string name="place_card_transition">place_card_transition_%d</string>
+    <string name="place_ratingbar_transition">place_ratingbar_transition_%d</string>
+    <string name="place_rating_transition">place_rating_transition_%d</string>
 </resources>

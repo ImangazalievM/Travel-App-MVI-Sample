@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appbar_header_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/placeImages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="top"
+                android:background="@drawable/scrim_topdown" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/scrim" />
+
+            <com.travelguide.presentation.global.views.DotsIndicator
+                android:id="@+id/imagesIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="25dp"
+                android:alpha="1" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.travelguide.presentation.global.views.roundedcornerslayout.RoundCornerLayout
+        android:id="@+id/main_round_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        app:behavior_overlapTop="20dp"
+        app:layout_behavior="com.travelguide.presentation.global.views.roundedcornerslayout.RoundedLayoutBehavior"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:topRadius="10dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/placeContentScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:behavior_overlapTop="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/placeInfoCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/activity_place_details_content" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addFavoritesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        app:backgroundTint="#ffffff"
+        app:fabSize="normal"
+        app:layout_anchor="@+id/placeInfoCard"
+        app:layout_anchorGravity="top|right|end" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

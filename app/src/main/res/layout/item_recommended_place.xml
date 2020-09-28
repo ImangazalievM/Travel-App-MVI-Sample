@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/card_view"
+    android:id="@+id/placeCard"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginBottom="16dp"
@@ -19,7 +19,7 @@
         android:paddingBottom="16dp">
 
         <ImageView
-            android:id="@+id/placeImageImage"
+            android:id="@+id/placeImage"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:scaleType="centerCrop"
@@ -39,7 +39,7 @@
             android:textColor="?attr/titleTextColor"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/placeImageImage"
+            app:layout_constraintTop_toBottomOf="@+id/placeImage"
             tools:text="Cappadocia" />
 
         <TextView

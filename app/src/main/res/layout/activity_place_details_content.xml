@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_place_details">
+
+    <TextView
+        android:id="@+id/placeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/open_sans_bold"
+        android:textColor="?attr/titleTextColor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Cappadocia" />
+
+
+    <TextView
+        android:id="@+id/placeDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="?android:textColorSecondary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/placeRatingBar"
+        app:layout_constraintTop_toBottomOf="@+id/placeRatingBar"
+        tools:text="Cappadocia isn’t like anywhere else in the world. With its unique rock formations. Cappadocia isn’t like anywhere else in the world. With its unique rock formations" />
+
+    <RatingBar
+        android:id="@+id/placeRatingBar"
+        style="@style/PlaceRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:isIndicator="true"
+        android:rating="0"
+        android:stepSize="0.1"
+        app:layout_constraintStart_toStartOf="@+id/placeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/placeTitle" />
+
+    <TextView
+        android:id="@+id/placeRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/open_sans_regular"
+        android:maxLines="1"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/placeRatingBar"
+        app:layout_constraintStart_toEndOf="@+id/placeRatingBar"
+        app:layout_constraintTop_toTopOf="@+id/placeRatingBar"
+        tools:text="4.7" />
+
+    <TextView
+        android:id="@+id/reviewsCountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/open_sans_regular"
+        android:maxLines="2"
+        android:textColor="?android:textColorSecondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/placeRating"
+        app:layout_constraintStart_toEndOf="@+id/placeRating"
+        app:layout_constraintTop_toTopOf="@+id/placeRating"
+        tools:text="(387 reviews)" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

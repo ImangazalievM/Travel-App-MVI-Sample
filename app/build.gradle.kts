@@ -32,6 +32,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
 }
 
 dependencies {
@@ -40,10 +44,10 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.2.0")
     implementation("com.google.android.material:material:1.2.1")
     implementation("androidx.recyclerview:recyclerview:1.1.0")
-    implementation("javax.inject:javax.inject:1")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.1")
+    implementation("androidx.core:core-ktx:1.3.1")
 
     implementation("com.yarolegovich:discrete-scrollview:1.5.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.1")
 
     implementation("com.github.bumptech.glide:glide:4.10.0")
     kapt("com.github.bumptech.glide:compiler:4.10.0")
